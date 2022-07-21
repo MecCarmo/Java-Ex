@@ -20,7 +20,7 @@ public class OrderItem {
 
 	
 	
-	public int getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
 
@@ -28,7 +28,7 @@ public class OrderItem {
 		this.quantity = quantity;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 

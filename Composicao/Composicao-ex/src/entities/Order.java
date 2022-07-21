@@ -18,7 +18,6 @@ public class Order {
 	private List<OrderItem> items = new ArrayList<>();
 	
 	public Order() {
-		
 	}
 
 	public Order(Date moment, OrderStatus status, Client client) {
@@ -51,10 +50,6 @@ public class Order {
 		this.status = status;
 	}
 
-	public List<OrderItem> getItems() {
-		return items;
-	}
-
 	public void addItem(OrderItem item) {
 		items.add(item);
 	}
@@ -65,8 +60,8 @@ public class Order {
 	
 	public double total() {
 		double sum = 0.0;
-		for (OrderItem item : items) {
-			sum += item.subTotal();
+		for (OrderItem it : items) {
+			sum += it.subTotal();
 		}
 		return sum;
 	}

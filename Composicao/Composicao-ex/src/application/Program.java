@@ -14,6 +14,13 @@ import entities.enums.OrderStatus;
 
 public class Program {
 
+	/*  
+					ASSOCIAÇÃO 
+		É um tipo de associação que permite que um objeto "contenha outro"
+
+		Relação -> "tem-um" ou "tem-vários"
+	*/
+
 	public static void main(String[] args) throws ParseException {
 		
 		Scanner sc = new Scanner(System.in);
@@ -43,8 +50,8 @@ public class Program {
 		
 		System.out.print("How many items to this order?");
 		int n = sc.nextInt();
-		for(int i = 1; i < n; i++) {
-			System.out.printf("Enter #%d item data: ",i);
+		for(int i = 0; i < n; i++) {
+			System.out.print("Enter #" + (i+1) + " item data: ");
 			System.out.print("\nProduct name: ");
 			sc.nextLine(); 
 			String productName = sc.nextLine();
