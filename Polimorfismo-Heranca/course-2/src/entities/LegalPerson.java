@@ -26,6 +26,8 @@ public class LegalPerson extends TaxPayer{
 	public double tax() {
 		if(numberOfEmployees > 10) {
 			taxesPaid =  anualIncome * 0.14;
+		}else{
+			taxesPaid =  anualIncome * 0.16;
 		}
 		return taxesPaid;
 	}

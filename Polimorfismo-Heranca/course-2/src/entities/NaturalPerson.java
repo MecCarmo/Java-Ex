@@ -3,7 +3,7 @@ package entities;
 public class NaturalPerson extends TaxPayer{
 	
 	private Double healthExpend;
-	double taxesPaid = 0;
+	private double taxesPaid = 0;
 	
 	public NaturalPerson() {
 		super();
