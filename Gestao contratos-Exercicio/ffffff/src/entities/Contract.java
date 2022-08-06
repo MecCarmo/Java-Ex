@@ -1,20 +1,25 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Contract {
 
 	private Integer number;
-	private Double value;
 	private Date date;
+	private Double totalValue;
+	
+	List<Installment> installments = new ArrayList<Installment>();
 	
 	public Contract() {
 	}
-	
-	public Contract(Integer number, Double value, Date date) {
+
+	public Contract(Integer number, Date date, Double totalValue) {
+		super();
 		this.number = number;
-		this.value = value;
 		this.date = date;
+		this.totalValue = totalValue;
 	}
 
 	public Integer getNumber() {
@@ -25,14 +30,6 @@ public class Contract {
 		this.number = number;
 	}
 
-	public Double getValue() {
-		return value;
-	}
-
-	public void setValue(Double value) {
-		this.value = value;
-	}
-
 	public Date getDate() {
 		return date;
 	}
@@ -40,7 +37,16 @@ public class Contract {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	
-	
+
+	public Double getTotalValue() {
+		return totalValue;
+	}
+
+	public void setTotalValue(Double totalValue) {
+		this.totalValue = totalValue;
+	}
+
+	public List<Installment> getInstallments() {
+		return installments;
+	}	
 }

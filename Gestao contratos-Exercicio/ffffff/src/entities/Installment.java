@@ -1,44 +1,42 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Installment {
 
-	private Integer installmentNum;
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private Date dueDate;
+	private Double amount;
 	
-	Contract contract = new Contract();
-	
-	public Installment(Integer installmentNum, Date date) {
-
-		this.installmentNum = installmentNum;
-		this.dueDate = contract.getDate();
+	public Installment() {
 	}
 
-	public Integer getInstallmentNum() {
-		return installmentNum;
+	public Installment(Date dueDate, Double amount) {
+		super();
+		this.dueDate = dueDate;
+		this.amount = amount;
 	}
 
-	public void setInstallmentNum(Integer installmentNum) {
-		this.installmentNum = installmentNum;
-	}
-
-	public Date getDate() {
+	public Date getDueDate() {
 		return dueDate;
 	}
 
-	public void setDate(Date date) {
-		this.dueDate = date;
+	public void setDueDate(Date dueDate) {
+		this.dueDate = dueDate;
 	}
 
-	public Contract getContract() {
-		return contract;
+	public Double getAmount() {
+		return amount;
 	}
 
-	public void setContract(Contract contract) {
-		this.contract = contract;
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return sdf.format(dueDate) + " - " + String.format("%.2f", amount);
+	}
 }
